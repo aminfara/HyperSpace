@@ -148,6 +148,67 @@
           "to": [{ "key_code": "z", "modifiers": ["left_command", "left_shift"] }]
         }
       ]
+    },
+
+    {
+      "description": "HyperSpace Commands",
+      "manipulators": [
+        {
+          "type": "basic",
+          "description": "Hyper + q = quit",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "q", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "q", "modifiers": ["left_command"] }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + w = close window",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "w", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "w", "modifiers": ["left_command"] }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + s = save",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "s", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "s", "modifiers": ["left_command"] }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + r = refresh",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "r", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "r", "modifiers": ["left_command"] }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + f = find",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "f", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "f", "modifiers": ["left_command"] }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + t = new tab",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "t", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "t", "modifiers": ["left_command"] }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + n = new window",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "n", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "n", "modifiers": ["left_command"] }]
+        }
+      ]
     }
   ]
 }
