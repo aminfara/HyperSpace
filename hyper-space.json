@@ -84,7 +84,7 @@
           "description": "Hyper + u = home",
           "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
           "from": { "key_code": "u", "modifiers": { "optional": ["any"] } },
-          "to": [{ "key_code": "home" }]
+          "to": [{ "key_code": "left_arrow", "modifiers": ["left_command"] }]
         },
 
         {
@@ -92,7 +92,7 @@
           "description": "Hyper + o = end",
           "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
           "from": { "key_code": "o", "modifiers": { "optional": ["any"] } },
-          "to": [{ "key_code": "end" }]
+          "to": [{ "key_code": "right_arrow", "modifiers": ["left_command"] }]
         }
       ]
     },
