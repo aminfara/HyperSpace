@@ -1,0 +1,100 @@
+{
+  "title": "HyperSpace",
+  "description": "A Karabiner-Elements configuration for a hyper space layout.",
+  "url": "https://github.com/aminfara/HyperSpace",
+  "version": "1.0.0",
+  "author": "Ali Aminfar",
+  "website": "https://github.com/aminfara/HyperSpace",
+  "json_url": "https://raw.githubusercontent.com/aminfara/HyperSpace/refs/heads/main/hyper-space.json",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/aminfara/HyperSpace/refs/heads/main/hyper-space.json",
+  "repo": "https://github.com/aminfara/HyperSpace",
+
+  "rules": [
+    {
+      "description": "HyperSpace Basics",
+      "manipulators": [
+        {
+          "description": "Space: tap = space, hold = enable hyper layer",
+          "type": "basic",
+          "from": { "key_code": "spacebar", "modifiers": { "optional": ["any"] } },
+          "to_if_held_down": [{ "set_variable": { "name": "hyper_space", "value": 1 } }],
+          "to_after_key_up": [{ "set_variable": { "name": "hyper_space", "value": 0 } }],
+          "to_if_alone": [{ "key_code": "spacebar" }],
+          "parameters": { "basic.to_if_held_down_threshold_milliseconds": 200 }
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + b = space",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "b", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "spacebar" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + i = up",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "i", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "up_arrow" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + j = left",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "j", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "left_arrow" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + k = down",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "k", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "down_arrow" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + l = right",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "right_arrow" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + p = page up",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "p", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "page_up" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + ; = page down",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "semicolon", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "page_down" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + u = home",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "u", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "home" }]
+        },
+
+        {
+          "type": "basic",
+          "description": "Hyper + o = end",
+          "conditions": [{ "type": "variable_if", "name": "hyper_space", "value": 1 }],
+          "from": { "key_code": "o", "modifiers": { "optional": ["any"] } },
+          "to": [{ "key_code": "end" }]
+        }
+      ]
+    }
+  ]
+}
