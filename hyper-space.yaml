@@ -97,6 +97,12 @@ rules:
         from: { key_code: a, modifiers: { optional: [any] } }
         to: [{ key_code: a, modifiers: [left_command] }]
 
+      - description: 'hs + s: save'
+        type: basic
+        conditions: [{ type: variable_if, name: hyper_space, value: true }]
+        from: { key_code: s, modifiers: { optional: [any] } }
+        to: [{ key_code: s, modifiers: [left_command] }]
+
       - description: 'hs + c: copy'
         type: basic
         conditions: [{ type: variable_if, name: hyper_space, value: true }]
